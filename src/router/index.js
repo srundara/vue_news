@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Admin from '../views/Admin.vue'
+import HelloWorld from '../components/HelloWorld.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView  
     },
     // {
     //   path: '/about',
@@ -22,5 +23,4 @@ const router = createRouter({
     }
   ]
 })
-
 export default router

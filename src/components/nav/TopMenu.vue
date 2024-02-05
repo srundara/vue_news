@@ -2,8 +2,10 @@
     import {ref, onMounted} from 'vue'
     import { RouterLink, RouterView } from 'vue-router'
     import axios from 'axios'
+    // import { menuItem } from '../store';
     const data = ref([])
     const isLoading = ref(false)
+    // const menu = menuItem.menuList
     const getMenu = () => {
         isLoading.value = true
         const url = "https://reanweb.com/api/teaching/get-menu.php"
@@ -29,7 +31,7 @@
                     <div class="menu">
                         <ul >
                             <li>
-                                <RouterLink to="home"><i class="fa-solid fa-house"></i></RouterLink>
+                                <RouterLink to="/"><i class="fa-solid fa-house"></i></RouterLink>
                             </li>
                             <li v-for="(menu,i) in data" :key="i">
                                 <RouterLink :to="{name:' ', params:{pid:i}}"> {{ menu.name }}</RouterLink>
