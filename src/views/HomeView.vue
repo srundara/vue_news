@@ -2,10 +2,9 @@
   import {ref, onMounted} from 'vue'
   import { RouterLink, RouterView } from 'vue-router'
   import axios from 'axios'
-  // import { menuItem } from '../store';
   const data = ref([])
+  const description =  ref('')
   const isLoading = ref(false)
-  // const menu = menuItem.menuList
   const getItemList = () => {
       isLoading.value = true
       const url = "https://reanweb.com/api/teaching/get-news.php?"
@@ -14,6 +13,8 @@
           (rp) => {
               console.log(rp.data)
               data.value = rp.data
+              description.value = rp.data
+              // subDescription();
               isLoading.value = false
           }
       )
@@ -30,7 +31,8 @@
         <!-- Start Get New API -->
         <div class="row">
           <div class=" col-md-3 mt-2" v-for="(item,i) in data" :key="i">
-            <div class="card">
+            <RouterLink to="">
+              <div class="card">
                 <div class="card-header">
                     <h6 class="">{{item.title}}</h6>
                 </div>
@@ -38,12 +40,20 @@
                   <div class="img_box">
                     <img :src="item.img" alt="">
                   </div>
-                  <h5 class="card-title"></h5>
-                  {{item.des}}
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <div class="card-title"  >
+                    <!-- {{item.des.substring(0,150) + '...'}} -->
+                    <div v-html="item.des.substring(0,140)+ '...' " >
+                      
+                    </div>
+                  </div>
+                  <p class="post_date ">{{ item.post_date }}</p>
+                  <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                 </div>
-            </div>
+              </div>
+            </RouterLink>
           </div>
+          <span class="mt-2"></span>
+          
         </div>
         <!-- End Get News API -->
 
