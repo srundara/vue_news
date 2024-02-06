@@ -17,10 +17,30 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // },
     {
-      path: '/:pid',
-      name: ' ',
+      path: '/កម្សាន្ត',
+      name: '1',
       component: Admin
-    }
+    },
+    {
+      path: '/បច្ចេកវិទ្យា',
+      name: '2',
+      component: Admin
+    },
+    {
+      path: '/កីឡា',
+      name: '3',
+      component: Admin
+    },
+    {
+      path: '/សង្គម',
+      name: '4',
+      component: Admin
+    },
+    {
+      path: '/កសិកម្ម',
+      name: '9',
+      component: Admin
+    },
   ]
 })
 export default router

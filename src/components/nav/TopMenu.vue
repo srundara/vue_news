@@ -34,7 +34,10 @@
                                 <RouterLink to="/"><i class="fa-solid fa-house"></i></RouterLink>
                             </li>
                             <li v-for="(menu,i) in data" :key="i">
-                                <RouterLink :to="{name:' ', params:{pid:i}}"> {{ menu.name }}</RouterLink>
+                                <!-- {{ menu.id }} -->
+                                <!-- <RouterLink :to="{name:' ', params:{pid:i}}"> {{ menu.name }}</RouterLink> -->
+                                <!-- <RouterLink :to="'/'+menu.id"> {{ menu.name }} {{  }}</RouterLink> -->
+                                <RouterLink :to="{name : menu.id}"> {{ menu.name }} {{  }}</RouterLink>
                             </li>
                         </ul>
                     </div>
