@@ -16,6 +16,9 @@
     color:white;
     text-decoration:none;
     padding:15px; 
+    font-family: 'Khmer OS Kien Svay', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
 }
 .menu ul li a:hover{
 	background-color:blue;
@@ -39,9 +42,10 @@
   height: 100%;
 }
 .img_box img{
-  object-fit:fill;
+  object-fit:cover;
   width: 100%;
   height: 230px;
+  transition: all .2s ease-in-out;
 }
 .card-body{
   padding: 0;
@@ -67,4 +71,22 @@ a .card .card-body .img_box img:hover{
   object-fit:cover;
   width: 100%;
   height: 230px;
+  transform: scale(0.98);
+}
+.card .header{
+  /* margin: auto; */
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 15px;
+}
+.card .header h3{
+  color:black;
+  height: 60px;
+  font-size: 28px;
+  font-family: 'Khmer OS Kien Svay', sans-serif;
+  font-weight: bolder;
+}
+.card .card-body .body p{
+  font-family: 'Khmer OS Battambang', sans-serif;
+  padding: 10px;
 }

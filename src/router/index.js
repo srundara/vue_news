@@ -6,6 +6,7 @@ import Technology from '../views/Technology.vue'
 import Keyla from '../views/Keyla.vue'
 import Society from '../views/Society.vue'
 import Ksekam from '../views/Ksekam.vue'
+import Detail1 from '../views/Detail1.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/កសិកម្ម',
       name: '9',
       component: Ksekam
+    },
+    {
+      path: '/detail1/:pid',
+      name: 'detail1',
+      component: Detail1
     },
   ]
 })

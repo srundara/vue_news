@@ -7,7 +7,7 @@
   const isLoading = ref(false)
   const getItemList = () => {
       isLoading.value = true
-      const url = "https://reanweb.com/api/teaching/get-news.php?"
+      const url = "https://reanweb.com/api/teaching/get-news.php? "
       axios.get(url)
       .then( 
           (rp) => {
@@ -25,12 +25,19 @@
 </script>
 
 <template>
+
   <div class="container">
+    <!-- <button @click="getDetail">Click</button> -->
+    <!-- <div v-for="(item,i) in detail" :key="i">
+          <h1> {{ item.id }}</h1> 
+          </div> -->
     <div class="row">
       <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
         <!-- Start Get New API -->
         <div class="row">
+         
           <div class=" col-md-3 mt-2" v-for="(item,i) in data" :key="i">
+            
             <RouterLink to="">
               <div class="card">
                 <div class="card-header">

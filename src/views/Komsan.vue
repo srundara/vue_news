@@ -27,10 +27,10 @@ onMounted( () => {
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                 <div class="row">
                     <div class="col-md-3 mt-2" v-for="(item, i) in data" :key="i">
-                        <router-link to="">
+                        <RouterLink :to="{name:'detail1', params:{pid:i}}">
                             <div class="card">
                                 <div class="card-header">
-                                    <h6>{{item.title}} <b></b></h6>
+                                    <h6>{{item.title}}</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="img_box">
@@ -42,7 +42,7 @@ onMounted( () => {
                                     <p class="post_date">{{item.post_date}}</p>
                                 </div>
                             </div>
-                        </router-link>
+                        </RouterLink>
                     </div>
                     <span class="mt-2"></span>
                 </div>

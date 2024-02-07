@@ -37,7 +37,7 @@
                                 <!-- {{ menu.id }} -->
                                 <!-- <RouterLink :to="{name:' ', params:{pid:i}}"> {{ menu.name }}</RouterLink> -->
                                 <!-- <RouterLink :to="'/'+menu.id"> {{ menu.name }} {{  }}</RouterLink> -->
-                                <RouterLink :to="{name : menu.id}"> {{ menu.name }} {{  }}</RouterLink>
+                                <RouterLink :to="{name : menu.id}"> {{ menu.name }} </RouterLink>
                             </li>
                         </ul>
                     </div>

@@ -4,6 +4,7 @@ import { RouterLink , RouterView} from "vue-router";
 import axios from "axios";
 const data = ref([])
 const isLoading = ref(false)
+const Keyla = ref([])
 const getItemList = () => {
     isLoading.value = true
     const url = "https://reanweb.com/api/teaching/get-news.php?mid=3"
@@ -16,6 +17,9 @@ const getItemList = () => {
             }
         )
 }
+const Detail = () => {
+
+}
 onMounted( () => {
     getItemList();
 })
@@ -27,7 +31,7 @@ onMounted( () => {
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
                 <div class="row">
                     <div class="col-md-3 mt-2" v-for="(item, i) in data" :key="i">
-                        <router-link to="">
+                        <RouterLink :to="{name:'3'}">
                             <div class="card">
                                 <div class="card-header">
                                     <h6>{{item.title}} <b></b></h6>
@@ -42,7 +46,7 @@ onMounted( () => {
                                     <p class="post_date">{{item.post_date}}</p>
                                 </div>
                             </div>
-                        </router-link>
+                        </RouterLink>
                     </div>
                     <span class="mt-2"></span>
                 </div>
