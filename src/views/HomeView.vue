@@ -2,6 +2,7 @@
   import {ref, onMounted} from 'vue'
   import { RouterLink, RouterView } from 'vue-router'
   import axios from 'axios'
+  import TopMenu from '../components/nav/TopMenu.vue'
   const data = ref([])
   const description =  ref('')
   const isLoading = ref(false)
@@ -26,7 +27,8 @@
 
 <template>
 
-  <div class="container">
+  <!-- <TopMenu/> -->
+  <div class="container"> 
     <!-- <button @click="getDetail">Click</button> -->
     <!-- <div v-for="(item,i) in detail" :key="i">
           <h1> {{ item.id }}</h1> 

@@ -7,8 +7,6 @@ import TopMenu from './components/nav/TopMenu.vue'
   <div>
     <top-menu/>
     <RouterView/>
-
-
   </div>
 
 </template>
