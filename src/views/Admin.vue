@@ -20,9 +20,8 @@
 </script>
 <template>
     <div class="container">
-        <div class="row">
-      <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
-        <!-- Start Get New API -->
+        <!-- <div class="row">
+      <div class=""> -->
         <div class="row">
           <div class=" col-md-3 mt-2" v-for="(item,i) in newsData" :key="i">
             <RouterLink to="">
@@ -46,6 +45,6 @@
         </div>
         <!-- End Get News API -->
       </div>
-    </div>
-    </div>
+    <!-- </div>
+    </div> -->
 </template>

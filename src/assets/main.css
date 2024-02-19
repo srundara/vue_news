@@ -4,7 +4,7 @@
   list-style-type:none;
 }
 .menu{
-	background-color:orange;
+	background-color:#fa1939;
 }
 .menu ul{
   margin:0;
@@ -13,7 +13,7 @@
 }
 .menu ul li a{
 	  display:block;
-    color:white;
+    color:rgba(255,255,255,.8);
     text-decoration:none;
     padding:15px; 
     font-family: 'Khmer OS Kien Svay', sans-serif;
@@ -21,10 +21,11 @@
     font-size: 18px;
 }
 .menu ul li a:hover{
-	background-color:blue;
+	color: white;
 }
 .menu ul li a.router-link-active{
   background-color:crimson;
+  color: white;
 }
 .card-header{
   background-color:lightseagreen;
