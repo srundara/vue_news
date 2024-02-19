@@ -4,17 +4,17 @@
     import axios from 'axios'
     // import { menuItem } from '../store';
     const data = ref([])
-    const props = defineProps(['menuId'])
+    const props = defineProps(['mid'])
     const menu = ref()
     const isLoading = ref(false)
     watchEffect( () => {
-        console.log(props.menuId)
-        menu.value = props.menuId
+        console.log(props.mid)
+        menu.value = props.mid
         
     })
     // const menu = menuItem.menuList
     const getMenu = () => {
-        menu.value = props.menuId
+        menu.value = props.mid
         isLoading.value = true
         const url = "https://reanweb.com/api/teaching/get-menu.php"
         axios.get(url)
@@ -42,7 +42,7 @@
                                 <RouterLink to="/"><i class="fa-solid fa-house"></i></RouterLink>
                             </li>
                             <li v-for="(menu,i) in data" :key="i">
-                                <RouterLink :to="{name:'menu', params:{menuId:menu.id}}"> {{ menu.name }} </RouterLink>
+                                <RouterLink :to="{name:'menu', params:{mid:menu.id}}"> {{ menu.name }} </RouterLink>
                             </li>
                         </ul>
                     </div>

@@ -17,7 +17,7 @@ const router = createRouter({
       component: HomeView  
     },
     {
-      path:'/:menuId',
+      path:'/:mid',
       name:'menu',
       component:Admin,
       props:true,
